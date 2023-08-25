@@ -43,5 +43,8 @@
     <module>idmManager</module>
     <module>idmManager2</module>
     <module>idmManager3</module>
+    <module>idmManager4</module>
+    <module>idmManager5</module>
+    <module>ui.swing</module>
   </modules>
 </project>

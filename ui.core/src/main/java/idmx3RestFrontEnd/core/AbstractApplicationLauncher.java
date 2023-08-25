@@ -21,7 +21,6 @@ import javax.swing.UIManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import idmx3RestFrontEnd.controller.DefaultWindowController;
 import idmx3RestFrontEnd.util.SplashStatus;
 import idmx3RestFrontEnd.view.delegator.converter.ViewResourceColorConverter;
 
@@ -145,15 +144,23 @@ public abstract class AbstractApplicationLauncher extends
 	@Override
 	protected void done() {
 		try {
+			//logger.info("checkPost_1");
 			Application application = get();
+			//logger.info("checkPost_2");
 			updateSplashForPrepareUI();
+			//logger.info("checkPost_3");
 		 /* -------------------------------- PREPARE UI -- (2) --------------------------------- */
 			application.prepareUI();
+			//logger.info("checkPost_4");
 			updateSplashForInitUI();
 		 /* --------------------------------- INIT UI ---- (3) --------------------------------- */
+			//logger.info("checkPost_5");
 			application.initUI();
+			//logger.info("checkPost_6");
 			updateSplashForOpening();
+			//logger.info("checkPost_7");
 			notifyInit();
+			//logger.info("checkPost_8");
 		} catch (InterruptedException e1) {
 			logger.error(APPLICATION_INIT_FAILED_PREFIX + e1.getMessage());
 		} catch (ExecutionException e1) {
